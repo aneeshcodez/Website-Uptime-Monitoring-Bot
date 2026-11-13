@@ -60,7 +60,14 @@ def check_website(url):
 
 # Example Usage
 while True:
-    print("google.com:", check_website("http://localhost:8000"))
+    print("Local Server:", check_website("http://localhost:8000"))
     time.sleep(45)
 #print("other-site:", check_website("https://kraftnest.netlify.app/"))
 #print("invalid-site:", check_website("thisisnotarealsite12345.com"))
+
+'''
+TO DO : 
+NEXT TASK : The program should handle multiple sites instead of just one site
+
+What the project does,in one sentence: it watches a list of websites and alerts you when any one of them goes down or comes back.
+'''
