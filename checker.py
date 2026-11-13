@@ -2,6 +2,8 @@ import requests
 
 from requests.exceptions import ConnectionError,RequestException,Timeout
 
+import time
+
 def check_website(url):
     if not url.startswith(("http://","https://")):
         url = "https://" + url
@@ -26,8 +28,9 @@ def check_website(url):
         return f"DOWN (Error: {e})"
 
 
-
 # Example Usage
-# print("google.com:", check_website("google.com"))
-# print("other-site:", check_website("https://kraftnest.netlify.app/"))
-# print("invalid-site:", check_website("thisisnotarealsite12345.com"))
+while True:
+    print("google.com:", check_website("google.com"))
+    time.sleep(45)
+#print("other-site:", check_website("https://kraftnest.netlify.app/"))
+#print("invalid-site:", check_website("thisisnotarealsite12345.com"))
